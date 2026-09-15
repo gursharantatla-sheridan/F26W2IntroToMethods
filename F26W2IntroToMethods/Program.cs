@@ -39,12 +39,45 @@
 
 
 
-            Console.Write("\n\nEnter a number: ");
-            
-            if (int.TryParse(Console.ReadLine(), out int num))
-                Console.WriteLine("\nnum = " + num);
-            else
-                Console.WriteLine("Invalid input. Please try again");
+            //Console.Write("\n\nEnter a number: ");
+
+            //if (int.TryParse(Console.ReadLine(), out int num))
+            //    Console.WriteLine("\nnum = " + num);
+            //else
+            //    Console.WriteLine("Invalid input. Please try again");
+
+
+            Console.WriteLine("\n\n");
+
+
+            // parameter array example
+
+            int i = 2, j = 5, k = 9;
+
+            Console.WriteLine("i = " + i + " j = " + j + " k = " + k);
+            Console.WriteLine($"i = {i} j = {j} k = {k}");
+            Console.WriteLine("i = {0} j = {1} k = {2}", i, j, k);
+
+
+            int[] arr = { 5, 3, 4, 7, 6, 2 };
+
+            PrintArray(arr);
+            PrintArray(3, 5, 6, 7, 8, 9, 87, 6, 5, 4, 3, 3, 4, 5, 5, 6, 7, 8);
+
+
+            string str = "hello, ";
+            str = str.TrimEnd(' ', ',');
+            Console.WriteLine(str + "world");
+        }
+
+
+        static void PrintArray(params int[] a)
+        {
+            Console.WriteLine("\n\nTotal items = " + a.Length);
+
+            foreach (int i in a)
+                Console.Write(i + " ");
+            Console.WriteLine();
         }
 
 
