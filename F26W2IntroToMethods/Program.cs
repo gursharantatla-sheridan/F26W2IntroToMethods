@@ -1,7 +1,11 @@
 ﻿namespace F26W2IntroToMethods
 {
+
+
     internal class Program
     {
+
+
         static void Main(string[] args)
         {
             int n = 5;
@@ -68,6 +72,23 @@
             string str = "hello, ";
             str = str.TrimEnd(' ', ',');
             Console.WriteLine(str + "world");
+
+            Console.WriteLine("\n\n");
+
+
+
+            PersonInfo("John", 32);
+            PersonInfo("John");
+            //PersonInfo(32, "John");
+
+            PersonInfo(name: "John", age: 32);
+            PersonInfo(age: 32, name: "John");
+        }
+
+
+        static void PersonInfo(string name, int age = 18)
+        {
+            // method body
         }
 
 
